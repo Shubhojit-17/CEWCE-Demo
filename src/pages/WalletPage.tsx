@@ -12,7 +12,7 @@ import {
 import { useDemoStore } from '../store/demoStore';
 
 export function WalletPage() {
-  const { currentUser, currentRole, isWalletConnected, walletBalance, toggleWallet } = useDemoStore();
+  const { currentUser, isWalletConnected, walletBalance, toggleWallet } = useDemoStore();
 
   const handleCopy = (text: string, label: string) => {
     navigator.clipboard.writeText(text);
