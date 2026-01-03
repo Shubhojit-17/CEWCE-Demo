@@ -2,7 +2,6 @@
 // Demo Templates Page
 // =============================================================================
 
-import { useState } from 'react';
 import { PlusIcon, PencilIcon, RocketLaunchIcon, InformationCircleIcon } from '@heroicons/react/24/outline';
 import { useDemoStore } from '../store/demoStore';
 import { formatDate, getRoleInfo } from '../lib/utils';
@@ -11,8 +10,6 @@ export function TemplatesPage() {
   const { currentRole, getVisibleTemplates, canCreateTemplates } = useDemoStore();
   const roleInfo = getRoleInfo(currentRole);
   const templates = getVisibleTemplates();
-
-  const [showCreateModal, setShowCreateModal] = useState(false);
 
   const getStatusBadge = (status: string) => {
     const styles: Record<string, string> = {

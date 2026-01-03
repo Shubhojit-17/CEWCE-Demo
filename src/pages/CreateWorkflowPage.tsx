@@ -5,13 +5,11 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeftIcon, CheckIcon } from '@heroicons/react/24/outline';
-import { useDemoStore, MOCK_TEMPLATES } from '../store/demoStore';
-import { getRoleInfo } from '../lib/utils';
+import { useDemoStore } from '../store/demoStore';
 
 export function CreateWorkflowPage() {
   const navigate = useNavigate();
-  const { currentRole, getVisibleTemplates } = useDemoStore();
-  const roleInfo = getRoleInfo(currentRole);
+  const { getVisibleTemplates } = useDemoStore();
 
   const templates = getVisibleTemplates().filter(t => t.status === 'PUBLISHED');
   

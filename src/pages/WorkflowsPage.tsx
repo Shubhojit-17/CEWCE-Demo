@@ -11,7 +11,7 @@ import {
   InformationCircleIcon,
 } from '@heroicons/react/24/outline';
 import { useDemoStore } from '../store/demoStore';
-import { formatDate, getStateName, getStateColor, getStatusColor, getPriorityColor, getRoleInfo } from '../lib/utils';
+import { formatDate, getStateName, getStateColor, getPriorityColor, getRoleInfo } from '../lib/utils';
 
 export function WorkflowsPage() {
   const { currentRole, getVisibleWorkflows, canApproveWorkflows } = useDemoStore();

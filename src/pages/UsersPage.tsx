@@ -5,12 +5,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  UserGroupIcon,
   ShieldCheckIcon,
   PlusIcon,
   MagnifyingGlassIcon,
   LockClosedIcon,
-  InformationCircleIcon,
 } from '@heroicons/react/24/outline';
 import { useDemoStore, MOCK_USERS } from '../store/demoStore';
 import { formatDate, truncateHash, getRoleInfo } from '../lib/utils';

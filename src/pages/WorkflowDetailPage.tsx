@@ -10,7 +10,6 @@ import {
   XCircleIcon,
   ExclamationTriangleIcon,
   DocumentTextIcon,
-  ClockIcon,
   InformationCircleIcon,
 } from '@heroicons/react/24/outline';
 import { useDemoStore, MOCK_WORKFLOWS, MOCK_TEMPLATES, MOCK_AUDIT_ENTRIES } from '../store/demoStore';
@@ -246,7 +245,7 @@ export function WorkflowDetailPage() {
               <h2 className="text-lg font-medium text-gray-900">Workflow States</h2>
             </div>
             <div className="card-body">
-              {template?.states.map((state, index) => {
+              {template?.states.map((state) => {
                 const isActive = state.id === workflow.currentState;
                 const isPast = state.id < workflow.currentState || 
                   (workflow.currentState >= 10 && state.id < 10);

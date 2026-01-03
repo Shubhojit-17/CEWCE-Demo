@@ -6,16 +6,13 @@ import {
   WalletIcon,
   ArrowPathIcon,
   CheckCircleIcon,
-  XCircleIcon,
   ClipboardDocumentIcon,
   InformationCircleIcon,
 } from '@heroicons/react/24/outline';
 import { useDemoStore } from '../store/demoStore';
-import { truncateHash, getRoleInfo } from '../lib/utils';
 
 export function WalletPage() {
   const { currentUser, currentRole, isWalletConnected, walletBalance, toggleWallet } = useDemoStore();
-  const roleInfo = getRoleInfo(currentRole);
 
   const handleCopy = (text: string, label: string) => {
     navigator.clipboard.writeText(text);

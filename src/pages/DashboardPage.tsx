@@ -10,7 +10,7 @@ import {
   ExclamationTriangleIcon,
   InformationCircleIcon,
 } from '@heroicons/react/24/outline';
-import { useDemoStore, MOCK_WORKFLOWS, MOCK_AUDIT_ENTRIES } from '../store/demoStore';
+import { useDemoStore, MOCK_AUDIT_ENTRIES } from '../store/demoStore';
 import { formatRelativeTime, getStateName, getStateColor, getRoleInfo } from '../lib/utils';
 
 // Feature tooltip component
